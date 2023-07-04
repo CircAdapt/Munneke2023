@@ -1,0 +1,17 @@
+Supplement of: Munneke AG, Lumens J, Arts T, Prinzen FW, Delhaas T, (2023) Myocardial perfusion and flow reserve in the asynchronous heart: mechanistic insight from a computational model.
+
+Instructions for this supplement: 
+Note: original simulations were perfomed in Matlab 2019A (The Mathworks Inc., Natick, MA, United States)
+
+1) To Run the CircAdapt Model for a single set of model parameters, execute and follow the instructions provided by the following script:
+>>CircAdaptMain.m
+
+Important notes for coronary flow regulation:
+P.CorArtVen.FC = 0; % means no flow regulation
+P.CorArtVen.FC = 1; % should be used for flow regulation from a reference (baseline simulation) (PRef.mat)
+P.CorArtVen.FC = 2; % should be used to establish the baseline simulation as it includes coronary adaptation to the current situation
+P.CorArtVen.FC = 3; % should be used to adapt the wall mass in case of chronic left bundle branch block (LBBB)
+
+2) To generate a figure as presented in the manuscript, evaluate the following script 'plotResults.m'.
+
+Please check www.CircAdapt.org for updates on the CircAdapt model and additional information.
